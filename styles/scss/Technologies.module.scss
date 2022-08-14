@@ -1,0 +1,89 @@
+.container {
+    scroll-snap-align: start;
+    height: 100%;
+    margin-inline: 20px;
+}
+
+.dividing_div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.circle_tech {
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 2em;
+}
+
+.full_circle {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+
+
+    img {
+        position: relative;
+    }
+}
+
+.imgs_circle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        animation: rotate360 4s linear infinite;
+    }
+}
+
+.centered_content {
+    h1 {
+        font-family: 'Ubuntu Mono';
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .lists {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        ul {
+            list-style-type: none;
+            line-height: 1.5;
+
+            h2 {
+                font-family: 'Tauri';
+            }
+
+            li {
+                margin-left: 20px;
+                font-family: 'Tauri';
+            }
+        }
+    }
+}
+
+.section_name {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    transform: skew(-10deg);
+    font-weight: 700;
+    //background: rgb(2,0,36);
+    //background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(86,9,121,1) 35%, rgba(255,0,198,1) 100%);
+    padding-inline: .125em;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 5px;
+        background-color: white;
+        top: clamp(.625em, 10vw, .675em);
+        width: calc(100% + 10px);
+        left: -10px;
+    }
+}
