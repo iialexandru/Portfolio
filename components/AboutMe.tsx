@@ -11,21 +11,18 @@ const AboutMe = () => {
       });
 
     return (
-        <div className={styles.container} id='aboutme'>
-            <div className={styles.section_name}>
-                <span>About Me</span>
+        <div className={styles.container} ref={ref} id='aboutme'>
+            <div className={styles.about_me_text}>
+                <h2 className={`${inView ? styles.am_head : ''} ${inView ? styles.fade_in_anim : ''}`}>Something about me...</h2>
+                <p className={inView ? styles.fade_in_anim : ''}>I&apos;m a 17 year old student that has a big passion for everything about web development and looking forward to pursuing a career in web development.</p>
             </div>
-            <div className={styles.about_paragraph} ref={ref}>
-                <p className={inView ? styles.fade_left_to_right_text : ''}>I&apos;m a young 16 year old student, who really has a big passion about programming. I&apos;ve started coding in 2019 for the first time in HTML, learning step by step everything about it
-                and since then I&apos;ve only evolved, managing...</p>
-
-                <div style={{ display: 'flex', justifyContent: 'center' }} className={inView ? styles.image_fade : ''}>
-                    <Image src='https://res.cloudinary.com/multimediarog/image/upload/v1655146804/Portfolio/274231930_1099182287294103_6993847869180623425_n_2_uwwk2p.jpg' width={280} height={280} />
-                </div>
-
-                <p className={inView ? styles.fade_right_to_left_text : ''}>...to learn a ton of new stuff and start working with some of the newest technologies right now, some of them
-                include ReactJS together with NextJS, but more about that in the next section.</p>
+            <div className={`${styles.image_of_self} ${inView ? styles.activate_animation : '' }`}>
+                <div className={styles.blue_back}></div>
+                <div className={styles.purple_back}></div>
+                <Image src='https://res.cloudinary.com/multimediarog/image/upload/v1655146804/Portfolio/274231930_1099182287294103_6993847869180623425_n_2_uwwk2p.jpg' width={400} height={400} />
             </div>
+            <div className={styles.ball_decoration}></div>
+            <div className={styles.decoration_ball_inv}></div>
         </div>
     )
 }

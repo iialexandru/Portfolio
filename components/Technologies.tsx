@@ -11,6 +11,8 @@ const Technologies = () => {
 
     return (
         <div className={styles.container} id='technologies'>
+            <div className={styles.decoration_ball_inv}></div>
+            <div className={styles.ball_decoration}></div>
             <div className={styles.dividing_div}>
                 <div className={styles.full_circle}>
                     <div className={styles.imgs_circle}>
@@ -25,7 +27,7 @@ const Technologies = () => {
                     </div>
 
                     <div className={styles.circle_tech}>
-                        <Image src='https://res.cloudinary.com/multimediarog/image/upload/v1655150151/Portfolio/undraw_server_cluster_jwwq_egw8q4.svg' width={200} height={200} />
+                        <Image src='https://res.cloudinary.com/multimediarog/image/upload/v1655150579/Portfolio/undraw_progressive_app_m-9-ms_jgyedp.svg' width={200} height={200} />
                     </div>
 
                     <div className={styles.imgs_circle}>
@@ -58,9 +60,10 @@ const Technologies = () => {
                         </ul>
                         <ul>
                             <h2>Backend Development</h2>
+                            <li>NodeJS</li>
+                            <li>ExpressJS</li>
                             <li>Cloudinary API</li>
                             <li>MongoDB, Mongoose</li>
-                            <li>ExpressJS</li>
                             <li>JWT</li>
                             <li>Socket.io</li>
                             <li>Redis</li>
@@ -87,14 +90,17 @@ const Technologies = () => {
                         <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1655151203/Portfolio/jwt-3_tr5rlv.svg'} width={50} height={50} />
                     </div>
                     <div className={styles.circle_tech}>
-                        <Image src='https://res.cloudinary.com/multimediarog/image/upload/v1655150579/Portfolio/undraw_progressive_app_m-9-ms_jgyedp.svg' width={200} height={200} />
+                        <Image src='https://res.cloudinary.com/multimediarog/image/upload/v1655150151/Portfolio/undraw_server_cluster_jwwq_egw8q4.svg' width={200} height={200} />
                     </div>
                     <div className={styles.imgs_circle}>
                         <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1660479362/Portfolio/npm-square-red-1_b1adwh.svg'} width={50} height={50} />
-                        <div style={{display: 'block', top: 30, position: 'relative'}}>
+                        <div style={{display: 'block', top: 35, position: 'relative', marginLeft: 7}}>
                             <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1660479400/Portfolio/redis_bai71d.svg'} width={50} height={50} />
                         </div>
-                        <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1660475974/Portfolio/socket-io_yxlazi.svg'} width={50} height={50} />
+                        <div style={{display: 'block', top: 30, position: 'relative'}}>
+                            <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1660475974/Portfolio/socket-io_yxlazi.svg'} width={50} height={50} />
+                        </div>
+                        <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1660833010/Portfolio/nodejs-1_zuaxkn.svg'} width={50} height={50} />
                     </div>
                 </div>
             </div>

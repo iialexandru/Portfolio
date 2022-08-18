@@ -1,14 +1,19 @@
 .container {
     scroll-snap-align: start;
-    height: 100%;
-    margin-inline: 20px;
+    position: relative;
+    border-block: 2px solid black;
+    // background-image: url('https://res.cloudinary.com/multimediarog/image/upload/v1660640355/Portfolio/flat-color-minimalist-abstract-background_144684-54_ljudjb.webp');
+    background-position: center;
+    background-size: cover;
+    background-color: #FEF1FA;
+    min-height: calc(100vh - 4em);
 }
 
 .dividing_div {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
+    padding-block: 2em;
 }
 
 .circle_tech {
@@ -61,6 +66,7 @@
             li {
                 margin-left: 20px;
                 font-family: 'Tauri';
+                font-weight: 600;
             }
         }
     }
@@ -73,8 +79,6 @@
     font-size: 3rem;
     transform: skew(-10deg);
     font-weight: 700;
-    //background: rgb(2,0,36);
-    //background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(86,9,121,1) 35%, rgba(255,0,198,1) 100%);
     padding-inline: .125em;
 
     &::before {
@@ -82,8 +86,27 @@
         position: absolute;
         height: 5px;
         background-color: white;
+        //#FEF1FA
         top: clamp(.625em, 10vw, .675em);
-        width: calc(100% + 10px);
-        left: -10px;
+        width: 60%;
     }
+}
+
+.decoration_ball_inv {
+    height: 75px;
+    width: 75px;
+    background-color: #FEF1FA;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ball_decoration {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+    background-color: black;    
 }
