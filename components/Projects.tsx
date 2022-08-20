@@ -1,17 +1,18 @@
 import { useInView } from 'react-intersection-observer';
-import Image from 'next/image';
+import Project from './Project'
 
 import styles from '../styles/scss/Projects.module.scss';
-import HistoryLine from './HistoryLine'
 
 
-interface Event {
-    numbered: number;
+export interface Event {
     title: string;
     date: string;
-    text: string;
+    description: string;
     image: string;
     video?: string;
+    type: string;
+    technologies: string[];
+
 }
 
 interface Events extends Array<Event>{}
@@ -20,38 +21,61 @@ interface Events extends Array<Event>{}
 const Projects = () => {
 
     const { ref, inView, entry } = useInView({
-        threshold: .4,
+        threshold: .2,
+        triggerOnce: true
       });
 
     const events: Events = Array(
         {
-            numbered: 0,
-            title: 'First time coding having a purpose in mind',
-            text: 'First I started coding tutorial to learn about web development',
+            title: 'Puppeteer News Scraping Project',
+            description: 'First There once was a ship that put to sea and in the name of the ship was a billy I started coding tutorial to learn about web development',
             image: 'https://res.cloudinary.com/multimediarog/image/upload/v1633172445/news/PTQ0MCZoYXNoPTMwNjVkYjIxODEyNjBiZWNlOTk0NGUxZTEyZGVhMDNi.thumb_btudhc.jpg',
-            date: '2019/05'
+            date: '2021/05',
+            type: 'FIICODE 2022',
+            technologies: ['Typescript', 'ReactJS', 'NextJS', 'SCSS', 'Gulp', 'NodeJS', 'ExpressJS', 'MongoDB', 'Mongoose', 'Puppeteer']
         },
         {
-            numbered: 15,
-            title: 'FIICode 2022, Stage I',
-            text: 'First I started coding tutorial to learn about web development',
+            title: 'Puppeteer News Scraping Project',
+            description: 'First I started coding tutorial to learn about web development',
             image: 'https://res.cloudinary.com/multimediarog/image/upload/v1633172445/news/PTQ0MCZoYXNoPTMwNjVkYjIxODEyNjBiZWNlOTk0NGUxZTEyZGVhMDNi.thumb_btudhc.jpg',
-            date: '2022/05'
-        },
-        {
-            numbered: 30,
-            title: 'FIICode 2022, Stage II (24h long Hackathon)',
-            text: 'First I started coding tutorial to learn about web development',
+            date: '2021/05',
+            type: 'FIICODE 2022',
+            technologies: ['Typescript', 'ReactJS', 'NextJS', 'SCSS', 'Gulp', 'NodeJS', 'ExpressJS', 'MongoDB', 'Mongoose', 'Puppeteer']
+        },        {
+            title: 'Puppeteer News Scraping Project',
+            description: 'First I started coding tutorial to learn about web development',
             image: 'https://res.cloudinary.com/multimediarog/image/upload/v1633172445/news/PTQ0MCZoYXNoPTMwNjVkYjIxODEyNjBiZWNlOTk0NGUxZTEyZGVhMDNi.thumb_btudhc.jpg',
-            date: '2022/05'
+            date: '2021/05',
+            type: 'FIICODE 2022',
+            technologies: ['Typescript', 'ReactJS', 'NextJS', 'SCSS', 'Gulp', 'NodeJS', 'ExpressJS', 'MongoDB', 'Mongoose', 'Puppeteer']
+        },        {
+            title: 'Puppeteer News Scraping Project',
+            description: 'First I started coding tutorial to learn about web development',
+            image: 'https://res.cloudinary.com/multimediarog/image/upload/v1633172445/news/PTQ0MCZoYXNoPTMwNjVkYjIxODEyNjBiZWNlOTk0NGUxZTEyZGVhMDNi.thumb_btudhc.jpg',
+            date: '2021/05',
+            type: 'FIICODE 2022',
+            technologies: ['Typescript', 'ReactJS', 'NextJS', 'SCSS', 'Gulp', 'NodeJS', 'ExpressJS', 'MongoDB', 'Mongoose', 'Puppeteer']
         },
     )
 
     return (
-        <div className={styles.container} id='projects'>
-            <HistoryLine 
-                events={events}
-            />
+        <div className={styles.container} ref={ref} id='projects'>
+            <div className={styles.headline}>
+                <h2 style={{opacity: inView ? 1 : 0}}>Projects</h2>
+            </div>
+            <div className={`${styles.projects} ${inView ? styles.project_vis : ''}`}>
+                {events.map((event: Event, key: number) => {
+                    return (
+                        (key + 1) % 3 !== 0 && key !== events.length - 1 ?
+                            <>
+                                <Project event={event} key={key} />
+                                <div className={styles.divider_line_grid} key={key}></div>
+                            </>
+                        :
+                            <Project event={event} key={key} />
+                    )
+                })}
+            </div>
         </div>
     )
 }

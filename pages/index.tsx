@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           </div>
 
           <div className={styles.main_section}>
-              <h1>- Ipatov Ioan Alexandru -</h1>
+            <h1>- Ipatov Ioan Alexandru -</h1>
             <h1>Web Developer</h1>
             <h1>Frontend &amp; <span>Backend</span></h1>
           </div>

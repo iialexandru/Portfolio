@@ -5,16 +5,18 @@ import styles from '../styles/scss/Technologies.module.scss';
 
 const Technologies = () => {
 
-    const { ref, inView, entry } = useInView({
-        threshold: .4,
+    const { ref, inView } = useInView({
+        threshold: .3,
+        triggerOnce: true
+
       });
 
     return (
-        <div className={styles.container} id='technologies'>
+        <div ref={ref} className={styles.container} id='technologies'>
             <div className={styles.decoration_ball_inv}></div>
             <div className={styles.ball_decoration}></div>
             <div className={styles.dividing_div}>
-                <div className={styles.full_circle}>
+                <div className={`${styles.full_circle} ${inView ? styles.put_in_place : ''}`}>
                     <div className={styles.imgs_circle}>
                         <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1655151065/Portfolio/react-2_q655ir.svg'} height={50} width={50} />
                         <div style={{display: 'block', bottom: 30, position: 'relative'}}>
@@ -43,10 +45,10 @@ const Technologies = () => {
                 </div>
 
                 <div className={styles.centered_content}>
-                    <div className={styles.section_name}>
-                        <span>Technologies</span>
+                    <div className={`${styles.section_name} ${inView ? styles.sn_before : ''}`}>
+                        <span style={{opacity: 0, transition: 'opacity 1s'}} className={inView ? styles.fade_in : ''}>Technologies</span>
                     </div>
-                    <div className={styles.lists}>
+                    <div className={`${styles.lists} ${inView ? styles.fade_in : ''}`}>
                         <ul>
                             <h2>Frontend Development</h2>
                             <li>HTML5, CSS3, Javascript</li>
@@ -70,15 +72,17 @@ const Technologies = () => {
                         </ul>
                         <ul>
                             <h2>Tools</h2>
+                            <li>Git, GitHub</li>
                             <li>NPM, Yarn</li>
                             <li>Google Cloud Platform</li>
                             <li>Cloudinary</li>
+                            <li>Trello</li>
                         </ul>
                         <Image style={{position: 'relative', bottom: 100}} src={'https://res.cloudinary.com/multimediarog/image/upload/v1655150156/Portfolio/undraw_code_review_re_woeb_iutbzk.svg'} width={250} height={200} layout={'fixed'} />
                     </div>
                 </div>
 
-                <div className={styles.full_circle}>
+                <div className={`${styles.full_circle} ${inView ? styles.put_in_place : ''}`}>
                     <div className={styles.imgs_circle}>
                         <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1655151389/Portfolio/cloudinary-2_rij5yf.svg'} height={50} width={50} />
                         <div style={{display: 'block', bottom: 30, position: 'relative'}}>

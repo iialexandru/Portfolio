@@ -53,6 +53,21 @@
     }
 }
 
+@keyframes first_head {
+    0% {transform: translateX(200px)}
+    100% {transform: translateX(0px)}
+}
+
+@keyframes second_head {
+    0% {transform: translateX(-200px)}
+    100% {transform: translateX(0px)}
+}
+
+@keyframes fade_in {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
 .main_section {
     display: flex;
     justify-content: center;
@@ -70,15 +85,18 @@
             margin-bottom: 0px;
             font-size: 1.2rem;
             color: rgb(200, 200, 200);
+            animation: fade_in 1.5s;
         }
 
         &:nth-child(2) {
             margin-bottom: 0;
+            animation: first_head 1s;
         }
 
         &:last-child {
             margin-top: 0px;
             color: #6C63FF;
+            animation: second_head 1s;
         }
     }
 }

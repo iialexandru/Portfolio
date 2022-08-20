@@ -2,97 +2,115 @@
 
 .container {
     scroll-snap-align: start;
-    background-color: #0cbaba;
-    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
-    // background-color: #f907fc;
-    // background-image: linear-gradient(315deg, #f907fc 0%, #05d6d9 74%);    
     display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 100%;
+    margin-inline: 1em;
+}
+
+.headline h2 {
+    margin-top: .825em;
+    font-family: 'Ubuntu Mono';
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3rem;
+    transform: skew(-10deg);
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .25s;
+    text-decoration: underline;
+}
+
+
+.projects {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2px 1fr 2px 1fr;
+    row-gap: 2.25em;
+}
+
+.divider_line_grid {
+    height: 100%;
+    width: 2px;
+    background-color: black;
+    opacity: 0;
+}
+
+@keyframes appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes inv {
+    0% {opacity: 0;}
+    100% {opacity: 0}
+}
+
+$animationTime: .1s;
+
+.project_vis {
+    @for $i from 1 through 100 {
+        div:nth-child(#{$i}) {
+            @if $i % 2 == 0 and $i % 6 != 0 {
+                animation: inv ($i - 1) * $animationTime linear, appear $animationTime ($i - 1) * $animationTime linear;
+            } @else {
+                animation: inv $i * $animationTime linear, appear $animationTime $i * $animationTime linear;
+            }
+            opacity: 1;
+        }
+    }
+}
+
+.project {
+    display: flex;
+    flex-flow: column nowrap;
     align-items: center;
     height: 100%;
-    overflow-x: scroll
-}
+    padding-inline: 1em;
+    transition: transform .5s ease-out;
+    opacity: 0;
 
-.line {
-    position: relative;
-    margin-inline: 40px;
-    height: 4px;
-    border-radius: 4px;
-    -webkit-box-shadow: 1px 1px 24px 5px rgba(255,255,255,0.77); 
-    box-shadow: 1px 1px 24px 5px rgba(255,255,255,0.77);
-    background-color: white;
-    min-width: 80vw;
-    width: 100vw;
-}
+    h2 {
+        font-family: 'Baloo Bhai 2';
+        text-align: center;
+        word-break: break-word;
+        margin-inline: 1em;
 
-.absolute_positioning_container {
-    position: absolute;
-}
+        span {
+            color: lighten(black, 50%);
+            font-size: 1rem;
+        }
+    }
 
-.event_circle {
-    position: relative;
-    height: 13px;
-    width: 13px;
-    border-radius: 50%;
-    background-color: white;
+    .description p {
+        text-align: center;
+        word-break: break-word;    
+        width: 80%;
+        margin-left: 10%;
+    }
 
-    &::after {
-        content: attr(date-text);
-        position: absolute; 
-        bottom: 0;
-        left: -23px;
-        top: 13px;
-        font-family: 'Baloo Bhai 2', cursive;
+    img {
+        border-radius: 2px;
+    }
+
+    &:hover {
+        transform: scale(1.1) translateY(-10px);
+        cursor: pointer;
     }
 }
 
-
-.event_container {
-    position: relative;
-    width: 500px;
-    height: 35vh;
-    background-color: white;
-    margin-left: -14px;
-    padding-top: 15px;
-    padding-left: 15px;
-    border: 1px solid black;
+.achv {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    height: 100%;
+    width: 80%;
 }
 
-.triangle_up {
-    position: relative;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: -30px;
-        width: 0; 
-        height: 0; 
-        left: 0;
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-        border-bottom: 30px solid white;
-        border: 1px solid black;
-    }
-}
-
-
-.triangle_down {
-    position: relative;
-
-    &::before {
-        content: '';
-        position: absolute;
-        bottom: -30px;
-        width: 0; 
-        height: 0; 
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-        border-top: 30px solid white;
-        border: 1px solid black;
-    }
-}
-
-.final_text {
-    float: right;
-    font-family: 'Baloo Bhai 2', cursive;
-    font-size: 1.2rem; 
+.divider_line {
+    height: 100px;
+    width: 2px;
+    background-color: rgb(147, 147, 147);
 }
