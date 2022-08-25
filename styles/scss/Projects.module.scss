@@ -42,6 +42,8 @@
     justify-content: center;
     grid-template-columns: 1fr 2px 1fr 2px 1fr;
     row-gap: 2.25em;
+    max-width: 1500px;
+    margin-inline: auto;
 }
 
 .divider_line_grid {
@@ -65,19 +67,6 @@ $animationTime: .08s;
 
 .project_vis {
     @for $i from 1 through 100 {
-        div:nth-child(#{$i}) {
-            @if $i % 2 == 0 and $i % 6 != 0 {
-                animation: inv ($i - 1) * $animationTime linear, appear $animationTime ($i - 1) * $animationTime linear;
-            } @else {
-                animation: inv $i * $animationTime linear, appear $animationTime $i * $animationTime linear;
-            }
-            opacity: 1;
-        }
-    }
-}
-
-.addition {
-    @for $i from 11 through 20 {
         div:nth-child(#{$i}) {
             @if $i % 2 == 0 and $i % 6 != 0 {
                 animation: inv ($i - 1) * $animationTime linear, appear $animationTime ($i - 1) * $animationTime linear;
@@ -125,27 +114,68 @@ $animationTime: .08s;
 }
 
 .achv {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
     justify-content: center;
-    gap: 2em;
+    align-items: center;
     height: auto;
     font-family: 'Tauri';
     font-size: .9rem;
+
+    p {
+        text-align: center;
+        margin-inline: 10px;
+    }
 }
 
 .divider_line {
     height: 100%;
-    width: 2px;
+    min-width: 2px;
+    max-width: 2px;
     background-color: rgb(147, 147, 147);
 }
 
 .links {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2.5em;
     margin-top: 5px;
+    position: relative;
+    left: -3px;
 
 
     img {
         cursor: pointer;
     }
 }
+
+
+@media screen and (max-width: 1000px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        max-width: 580px;
+        margin-inline: auto;
+
+        .description p {
+            width: 90vw;
+            max-width: 580px;
+            margin-left: 0;
+        }
+    }
+
+    .project_vis {
+        @for $i from 1 through 100 {
+            div:nth-child(#{$i}) {
+                animation: inv $i * $animationTime linear, appear $animationTime $i * $animationTime linear;
+                opacity: 1;
+            }
+        }
+    }
+
+}
+

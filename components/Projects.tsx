@@ -1,7 +1,9 @@
 import { useInView } from 'react-intersection-observer';
 import Project from './Project'
+import {useEffect} from 'react'
 
 import styles from '../styles/scss/Projects.module.scss';
+import useWindowSize from '../utils/useWindowSize'
 
 
 export interface Event {
@@ -19,6 +21,7 @@ interface Events extends Array<Event>{}
 
 
 const Projects = () => {
+    const [width] = useWindowSize()
 
     const { ref, inView, entry } = useInView({
         threshold: .2,
@@ -92,68 +95,31 @@ const Projects = () => {
         },
     )
 
+    useEffect(() => {
+        console.log(inView)
+    }, [inView])
     return (
-        <div className={styles.container} ref={ref} id='projects'>
-            <div className={styles.headline}>
+        <div className={styles.container}  id='projects'>
+            <div className={styles.headline} ref={ref}>
                 <h2 style={{opacity: inView ? 1 : 0}}>Projects</h2>
             </div>
             <div className={styles.disclaimer}>
-                <p style={{opacity: inView ? 1 : 0}}>*Disclaimer: all projects use Typescript, SCSS and ReactJS. If a server is included (almost all of them have one) then it uses NodeJS, Express, MongoDB, Mongoose.</p>
-                <p style={{marginTop: -20, marginBottom: 30, opacity: inView ? 1 : 0}}>*The websites may not work at first, since the server is not always on, only when it is used. (Heroku Free Plan)</p>
+                <p style={{opacity: inView ? 1 : 0, marginTop: width <= 1000 ? -10 : 0}}>*Disclaimer: all projects use Typescript, SCSS and ReactJS. If a server is included &#40;almost all of them have one&#41; then it uses NodeJS, Express, MongoDB, Mongoose.</p>
+                <p style={{marginTop: width <= 1000 ? 0 : -10, marginBottom: 30, opacity: inView ? 1 : 0}}>*The websites may not work at first, since the server is not always on, only when it is used. &#40;Heroku Free Plan&#41;</p>
             </div>
             <div className={`${styles.projects} ${inView ? styles.project_vis : ''}`}>
-                {/* {events.length % 3 !== 0 ?
-                    events.slice(0, events.length - events.length % 3).map((event: Event, key: number) => {
-                        return (
-                            (key + 1) % 3 !== 0 && key !== events.length - 1 ?
-                                <>
-                                    <Project event={event} key={key} />
-                                    <div className={styles.divider_line_grid} key={key}></div>
-                                </>
-                            :
-                                <Project event={event} key={key} />
-                        )
-                    })
-                :
-                    events.map((event: Event, key: number) => {
-                        return (
-                            (key + 1) % 3 !== 0 && key !== events.length - 1 ?
-                                <>
-                                    <Project event={event} key={key} />
-                                    <div className={styles.divider_line_grid} key={key}></div>
-                                </>
-                            :
-                                <Project event={event} key={key} />
-                        )
-                    })
-                } */}
                 {events.map((event: Event, key: number) => {
                         return (
                             (key + 1) % 3 !== 0 && key !== events.length - 1 ?
                                 <>
                                     <Project event={event} key={key} />
-                                    <div className={styles.divider_line_grid} key={key + 1}></div>
+                                    {width > 1000 && <div className={styles.divider_line_grid} key={key * key}></div> }
                                 </>
                             :
                                 <Project event={event} key={key} />
                         )
                     })}
             </div>
-            {/* <div style={{display: 'flex', justifyContent: 'center', marginTop: '2.25em'}} className={styles.addition}>
-                {events.length % 3 !== 0 &&
-                    events.slice(events.length - events.length % 3, events.length).map((event: Event, key: number) => {
-                            return (
-                                (key + 1) % 3 !== 0 && key !== events.length  ?
-                                    <>
-                                        <Project event={event} key={key} />
-                                        <div className={styles.divider_line_grid} style={{height: 'auto'}} key={key}></div>
-                                    </>
-                                :
-                                    <Project event={event} key={key} />
-                        )
-                    })
-                }
-            </div> */}
         </div>
     )
 }

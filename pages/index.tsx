@@ -57,8 +57,6 @@ const Home: NextPage = () => {
           <Technologies />
           <Projects />
           <Contact />
-
-          {/* <MobileNav /> */}
       </div>
     </NoSSR>
   )

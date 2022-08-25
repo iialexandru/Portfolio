@@ -3,8 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from '../styles/scss/Contact.module.scss';
+import useWindowSize from '../utils/useWindowSize'
+
 
 const Contact = () => {
+    const [width] = useWindowSize()
 
     const { ref, inView, entry } = useInView({
         threshold: .4,
@@ -50,7 +53,7 @@ const Contact = () => {
                 </div>
                 <div className={styles.email}>
                     <div style={{display: 'block', marginTop: 5}}>
-                        <Image src='https://res.cloudinary.com/multimediarog/image/upload/v1661097059/Portfolio/mail-142_5_zaxev6.svg' width={30} height={25} alt='Email' priority/>
+                        <Image src='https://res.cloudinary.com/multimediarog/image/upload/v1661097059/Portfolio/mail-142_5_zaxev6.svg' width={width < 320 ? 25 : 30} height={width < 320 ? 20 : 25} alt='Email' priority/>
                     </div>
                     <span>: ioanalexandruipatov12@gmail.com</span>
                 </div>
