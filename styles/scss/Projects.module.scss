@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap');
 
 .container {
-    scroll-snap-align: start;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     width: 100%;
-    margin-inline: 1em;
+    padding-inline: 1em;
+    margin-bottom: 2em;
 }
 
 .headline h2 {
@@ -23,10 +23,23 @@
     text-decoration: underline;
 }
 
+.disclaimer {
+    color: rgb(150, 150, 150);
+    font-family: 'Baloo Bhai 2';
+
+    p {
+        opacity: 0;
+        transition: opacity .25s;
+        font-size: clamp(.8rem, 2.5vw, 1rem);
+        line-height: 1;
+    }
+}
+
 
 .projects {
     display: grid;
     align-items: center;
+    justify-content: center;
     grid-template-columns: 1fr 2px 1fr 2px 1fr;
     row-gap: 2.25em;
 }
@@ -48,10 +61,23 @@
     100% {opacity: 0}
 }
 
-$animationTime: .1s;
+$animationTime: .08s;
 
 .project_vis {
     @for $i from 1 through 100 {
+        div:nth-child(#{$i}) {
+            @if $i % 2 == 0 and $i % 6 != 0 {
+                animation: inv ($i - 1) * $animationTime linear, appear $animationTime ($i - 1) * $animationTime linear;
+            } @else {
+                animation: inv $i * $animationTime linear, appear $animationTime $i * $animationTime linear;
+            }
+            opacity: 1;
+        }
+    }
+}
+
+.addition {
+    @for $i from 11 through 20 {
         div:nth-child(#{$i}) {
             @if $i % 2 == 0 and $i % 6 != 0 {
                 animation: inv ($i - 1) * $animationTime linear, appear $animationTime ($i - 1) * $animationTime linear;
@@ -68,10 +94,11 @@ $animationTime: .1s;
     flex-flow: column nowrap;
     align-items: center;
     height: 100%;
-    padding-inline: 1em;
+    margin-inline: 1em;
     transition: transform .5s ease-out;
     opacity: 0;
-
+    border-top: 2px solid black;
+    
     h2 {
         font-family: 'Baloo Bhai 2';
         text-align: center;
@@ -89,15 +116,11 @@ $animationTime: .1s;
         word-break: break-word;    
         width: 80%;
         margin-left: 10%;
+        font-family: 'Roboto';
     }
 
     img {
         border-radius: 2px;
-    }
-
-    &:hover {
-        transform: scale(1.1) translateY(-10px);
-        cursor: pointer;
     }
 }
 
@@ -105,12 +128,24 @@ $animationTime: .1s;
     display: flex;
     justify-content: center;
     gap: 2em;
-    height: 100%;
-    width: 80%;
+    height: auto;
+    font-family: 'Tauri';
+    font-size: .9rem;
 }
 
 .divider_line {
-    height: 100px;
+    height: 100%;
     width: 2px;
     background-color: rgb(147, 147, 147);
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+
+
+    img {
+        cursor: pointer;
+    }
 }

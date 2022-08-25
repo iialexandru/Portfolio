@@ -2,8 +2,11 @@ import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 
 import styles from '../styles/scss/Technologies.module.scss';
+import useWindowSize from '../utils/useWindowSize'
+
 
 const Technologies = () => {
+    const [width] = useWindowSize()
 
     const { ref, inView } = useInView({
         threshold: .3,
@@ -11,11 +14,17 @@ const Technologies = () => {
 
       });
 
+
     return (
         <div ref={ref} className={styles.container} id='technologies'>
             <div className={styles.decoration_ball_inv}></div>
             <div className={styles.ball_decoration}></div>
             <div className={styles.dividing_div}>
+                    {width <= 1000 && 
+                        <div className={`${styles.section_name} ${inView ? styles.sn_before : ''}`}>
+                            <span style={{opacity: 0, transition: 'opacity 1s'}} className={inView ? styles.fade_in : ''}>Technologies</span>
+                        </div>
+                    }
                 <div className={`${styles.full_circle} ${inView ? styles.put_in_place : ''}`}>
                     <div className={styles.imgs_circle}>
                         <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1655151065/Portfolio/react-2_q655ir.svg'} height={50} width={50} />
@@ -45,9 +54,11 @@ const Technologies = () => {
                 </div>
 
                 <div className={styles.centered_content}>
-                    <div className={`${styles.section_name} ${inView ? styles.sn_before : ''}`}>
-                        <span style={{opacity: 0, transition: 'opacity 1s'}} className={inView ? styles.fade_in : ''}>Technologies</span>
-                    </div>
+                    {width > 1000 && 
+                        <div className={`${styles.section_name} ${inView ? styles.sn_before : ''}`}>
+                            <span style={{opacity: 0, transition: 'opacity 1s'}} className={inView ? styles.fade_in : ''}>Technologies</span>
+                        </div>
+                    }
                     <div className={`${styles.lists} ${inView ? styles.fade_in : ''}`}>
                         <ul>
                             <h2>Frontend Development</h2>
@@ -78,7 +89,7 @@ const Technologies = () => {
                             <li>Cloudinary</li>
                             <li>Trello</li>
                         </ul>
-                        <Image style={{position: 'relative', bottom: 100}} src={'https://res.cloudinary.com/multimediarog/image/upload/v1655150156/Portfolio/undraw_code_review_re_woeb_iutbzk.svg'} width={250} height={200} layout={'fixed'} />
+                        {width > 550 && <Image style={{position: 'relative', bottom: 100}} src={'https://res.cloudinary.com/multimediarog/image/upload/v1655150156/Portfolio/undraw_code_review_re_woeb_iutbzk.svg'} width={250} height={200} layout={'fixed'} /> }
                     </div>
                 </div>
 
