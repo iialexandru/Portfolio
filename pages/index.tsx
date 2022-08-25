@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       <div className={styles.container} style={{ scrollBehavior: 'smooth' }}>
         <div className={styles.home}>
             <div className={styles.logo}>
-              <Image src={'/assets/images/PineTree.svg'} width={40} height={50} alt='Pine Tree' />
+              <Image src={'/assets/images/PineTree.svg'} width={40} height={50} alt='Pine Tree' priority/>
             </div>
 
             {width >= 615 &&
