@@ -27,6 +27,9 @@ const Home: NextPage = () => {
     <NoSSR fallback={<div style={{width: '100vw', height: '100vh'}}></div>}>
       <div className={styles.container} style={{ scrollBehavior: 'smooth' }}>
         <div className={styles.home}>
+            <div className={styles.logo}>
+              <Image src={'/assets/images/PineTree.svg'} width={40} height={50} alt='Pine Tree' />
+            </div>
 
             {width >= 615 &&
               <div className={styles.navbar}>

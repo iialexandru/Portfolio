@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app'
 function MyApp({ Component, pageProps }: AppProps) {
   return <>
   <Head>
-    <title>Portfolio Site - Ipatov Ioan Alexandru</title>
+    <title>Ipatov Ioan Alexandru - Web Develoepr</title>
   </Head>
   <Component {...pageProps} />
   </>
