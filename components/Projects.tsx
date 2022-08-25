@@ -99,7 +99,7 @@ const Projects = () => {
         console.log(inView)
     }, [inView])
     return (
-        <div className={styles.container}  id='projects'>
+        <div className={styles.container} id='projects'>
             <div className={styles.headline} ref={ref}>
                 <h2 style={{opacity: inView ? 1 : 0}}>Projects</h2>
             </div>
