@@ -48,7 +48,7 @@ const Home: NextPage = () => {
             <div className={styles.scroll_more}>
               <span>Scroll for More</span>
               <div className={styles.animated_arrow}>
-                <Image src='https://res.cloudinary.com/multimediarog/image/upload/v1654958735/Portfolio/arrow-down-3101_3_ehbczl.svg' width={30} height={30} alt='Arrow' />
+                <Image src={'/assets/images/ArrowDown.svg'} width={30} height={30} alt='Arrow' priority/>
               </div>
             </div>
           </div>

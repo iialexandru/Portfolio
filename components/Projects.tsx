@@ -32,7 +32,7 @@ const Projects = () => {
         {
             title: 'Puppeteer News Scraping Project',
             description: 'A website which you can see the news from multiple news sites, from different countries. Also, they can be sorted by date or you can select a specific date. In addition, there is a special page where you can compare the news from two different news websites, with filtering capabilities.',
-            image: 'https://res.cloudinary.com/multimediarog/image/upload/v1661082294/Portfolio/NewsArchivedIMG_l7nfeb.png',
+            image: '/assets/images/NewsArchiver.png',
             date: '2021/05',
             type: 'Personal Project',
             technologies: ['NextJS', 'Puppeteer']
@@ -40,7 +40,7 @@ const Projects = () => {
         {
             title: 'FIICODE 2022, Stage 1 (Domain)',
             description: 'First I started coding tutorial to learn about web development',
-            image: 'https://res.cloudinary.com/multimediarog/image/upload/v1661082840/Portfolio/ROMDIG_dpbp75.png',
+            image: '/assets/images/Romdig.png',
             date: '2021/05',
             type: 'FIICODE 2022',
             technologies: ['NextJS', 'Google Cloud Platform']
@@ -48,7 +48,7 @@ const Projects = () => {
         {
             title: 'FIICODE 2022, Stage1 (Subdomain)',
             description: 'First I started coding tutorial to learn about web development',
-            image: 'https://res.cloudinary.com/multimediarog/image/upload/v1661082770/Portfolio/Dashboard_Romdig_juh07b.png',
+            image: '/assets/images/DashboardRomdig.png',
             date: '2021/05',
             type: 'FIICODE 2022',
             technologies: ['NextJS', 'Google Cloud Platform']
@@ -56,7 +56,7 @@ const Projects = () => {
         {
             title: 'FIICODE 2022 Stage 2 - 24hr hackathon (Web App)',
             description: 'First I started coding tutorial to learn about web development',
-            image: 'https://res.cloudinary.com/multimediarog/image/upload/v1661083882/Portfolio/Child_Tracker_mxyhyr.png',
+            image: '/assets/images/ChildTracker.png',
             date: '2021/05',
             type: 'FIICODE 2022',
             technologies: ['Typescript']
@@ -64,7 +64,7 @@ const Projects = () => {
         {
             title: 'FIICODE 2022 Stage 2 - 24hr hackathon (React Native App)',
             description: 'First I started coding tutorial to learn about web development',
-            image: 'https://res.cloudinary.com/multimediarog/image/upload/v1633172445/news/PTQ0MCZoYXNoPTMwNjVkYjIxODEyNjBiZWNlOTk0NGUxZTEyZGVhMDNi.thumb_btudhc.jpg',
+            image: '/assets/images/Romdig.png',
             date: '2021/05',
             type: 'FIICODE 2022',
             technologies: ['Typescript']
@@ -72,7 +72,7 @@ const Projects = () => {
         {
             title: 'Weather App',
             description: 'First I started coding tutorial to learn about web development',
-            image: 'https://res.cloudinary.com/multimediarog/image/upload/v1633172445/news/PTQ0MCZoYXNoPTMwNjVkYjIxODEyNjBiZWNlOTk0NGUxZTEyZGVhMDNi.thumb_btudhc.jpg',
+            image: '/assets/images/Romdig.png',
             date: '2021/05',
             type: 'Internship 2022',
             technologies: ['Typescript']
@@ -80,7 +80,7 @@ const Projects = () => {
         {
             title: 'Messaging Website',
             description: 'First I started coding tutorial to learn about web development',
-            image: 'https://res.cloudinary.com/multimediarog/image/upload/v1633172445/news/PTQ0MCZoYXNoPTMwNjVkYjIxODEyNjBiZWNlOTk0NGUxZTEyZGVhMDNi.thumb_btudhc.jpg',
+            image: '/assets/images/Romdig.png',
             date: '2021/05',
             type: 'Internship 2022',
             technologies: ['Typescript']
@@ -88,7 +88,7 @@ const Projects = () => {
         {
             title: 'Chatting Application',
             description: 'First I started coding tutorial to learn about web development',
-            image: 'https://res.cloudinary.com/multimediarog/image/upload/v1633172445/news/PTQ0MCZoYXNoPTMwNjVkYjIxODEyNjBiZWNlOTk0NGUxZTEyZGVhMDNi.thumb_btudhc.jpg',
+            image: '/assets/images/Romdig.png',
             date: '2021/05',
             type: 'Internship 2022',
             technologies: ['Typescript']

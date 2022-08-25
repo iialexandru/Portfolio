@@ -9,7 +9,7 @@ const Technologies = () => {
     const [width] = useWindowSize()
 
     const { ref, inView } = useInView({
-        threshold: .3,
+        threshold: width < 1000 ? .1 : .2,
         triggerOnce: true
 
       });
@@ -27,29 +27,29 @@ const Technologies = () => {
                     }
                 <div className={`${styles.full_circle} ${inView ? styles.put_in_place : ''}`}>
                     <div className={styles.imgs_circle}>
-                        <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1655151065/Portfolio/react-2_q655ir.svg'} height={50} width={50} />
+                        <Image src={'/assets/images/ReactJS.svg'} height={50} width={50} alt='ReactJS' />
                         <div style={{display: 'block', bottom: 30, position: 'relative'}}>
-                            <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1660475929/Portfolio/react-native-1_sc1g9a.svg'} height={50} width={50} />
+                            <Image src={'/assets/images/ReactNative.svg'} height={50} width={50} alt='ReactNative' />
                         </div>
                         <div style={{display: 'block', bottom: 30, position: 'relative'}}>
-                            <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1655151365/Portfolio/apple-icon_tvswuc.png'} width={50} height={50} />
+                            <Image src={'/assets/images/GCP.png'} width={50} height={50} alt='GCP' />
                         </div>
-                        <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1660475937/Portfolio/redux_i2v1u0.svg'} width={50} height={50} />
+                        <Image src={'/assets/images/Redux.svg'} width={50} height={50} alt='Redux' />
                     </div>
 
                     <div className={styles.circle_tech}>
-                        <Image src='https://res.cloudinary.com/multimediarog/image/upload/v1655150579/Portfolio/undraw_progressive_app_m-9-ms_jgyedp.svg' width={200} height={200} />
+                        <Image src={'/assets/images/ClientBG.svg'} width={200} height={200} alt='ClientBG' />
                     </div>
 
                     <div className={styles.imgs_circle}>
-                        <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1655151026/Portfolio/next-js_m4iakr.svg'} width={50} height={50} />
+                        <Image src={'/assets/images/NextJS.svg'} width={50} height={50} alt='NextJS' />
                         <div style={{display: 'block', top: 30, position: 'relative'}}>
-                            <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1655151165/Portfolio/typescript-2_lijm6f.svg'} width={50} height={50} />
+                            <Image src={'/assets/images/Typescript.svg'} width={50} height={50} alt='Typescript' />
                         </div>
                         <div style={{display: 'block', top: 25, position: 'relative'}}>
-                            <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1655151063/Portfolio/gulp_wism5a.svg'} width={23} height={50} />
+                            <Image src={'/assets/images/GulpJS.svg'} width={23} height={50} alt='GulpJS' />
                         </div>
-                        <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1660475974/Portfolio/socket-io_yxlazi.svg'} width={50} height={50} />
+                        <Image src={'/assets/images/SocketIO.svg'} width={50} height={50} alt='SocketIO' />
                     </div>
                 </div>
 
@@ -89,33 +89,33 @@ const Technologies = () => {
                             <li>Cloudinary</li>
                             <li>Trello</li>
                         </ul>
-                        {width > 550 && <Image style={{position: 'relative', bottom: 100}} src={'https://res.cloudinary.com/multimediarog/image/upload/v1655150156/Portfolio/undraw_code_review_re_woeb_iutbzk.svg'} width={250} height={200} layout={'fixed'} /> }
+                        {width > 550 && <Image style={{position: 'relative', bottom: 100}} src={'/assets/images/FillImage.svg'} width={250} height={200} layout={'fixed'} alt='FillImage' /> }
                     </div>
                 </div>
 
                 <div className={`${styles.full_circle} ${inView ? styles.put_in_place : ''}`}>
                     <div className={styles.imgs_circle}>
-                        <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1655151389/Portfolio/cloudinary-2_rij5yf.svg'} height={50} width={50} />
+                        <Image src={'/assets/images/Cloudinary.svg'} height={50} width={50} alt='Cloudinary' />
                         <div style={{display: 'block', bottom: 30, position: 'relative'}}>
-                            <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1655151201/Portfolio/mongodb-icon-1_phmxdr.svg'} height={50} width={50} />
+                            <Image src={'/assets/images/MongoDB.svg'} height={50} width={50} alt='MongoDB' />
                         </div>
                         <div style={{display: 'block', bottom: 30, position: 'relative'}}>
-                            <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1655151268/Portfolio/express-109_xm8edu.svg'} width={50} height={50} />
+                            <Image src={'/assets/images/Express.svg'} width={50} height={50} alt='Express' />
                         </div>
-                        <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1655151203/Portfolio/jwt-3_tr5rlv.svg'} width={50} height={50} />
+                        <Image src={'/assets/images/JWT.svg'} width={50} height={50} alt='JWT' />
                     </div>
                     <div className={styles.circle_tech}>
-                        <Image src='https://res.cloudinary.com/multimediarog/image/upload/v1655150151/Portfolio/undraw_server_cluster_jwwq_egw8q4.svg' width={200} height={200} />
+                        <Image src={'/assets/images/ServerBG.svg'} width={200} height={200} alt='ServerBG' />
                     </div>
                     <div className={styles.imgs_circle}>
-                        <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1660479362/Portfolio/npm-square-red-1_b1adwh.svg'} width={50} height={50} />
+                        <Image src={'/assets/images/NPM.svg'} width={50} height={50} alt='NPM' />
                         <div style={{display: 'block', top: 35, position: 'relative', marginLeft: 7}}>
-                            <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1660479400/Portfolio/redis_bai71d.svg'} width={50} height={50} />
+                            <Image src={'/assets/images/Redis.svg'} width={50} height={50} alt='Redis' />
                         </div>
                         <div style={{display: 'block', top: 30, position: 'relative'}}>
-                            <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1660475974/Portfolio/socket-io_yxlazi.svg'} width={50} height={50} />
+                            <Image src={'/assets/images/SocketIO.svg'} width={50} height={50} alt='SocketIO' />
                         </div>
-                        <Image src={'https://res.cloudinary.com/multimediarog/image/upload/v1660833010/Portfolio/nodejs-1_zuaxkn.svg'} width={50} height={50} />
+                        <Image src={'/assets/images/NodeJS.svg'} width={50} height={50} alt='NodeJS' />
                     </div>
                 </div>
             </div>

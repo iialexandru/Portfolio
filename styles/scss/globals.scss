@@ -15,3 +15,44 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('/assets/fonts/UbuntuMono/UbuntuMono.woff2') format('woff2'),
+       url('/assets/fonts/UbuntuMono/UbuntuMono.woff') format('woff'),
+       url('/assets/fonts/UbuntuMono/UbuntuMono.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tauri';
+  src: url('/assets/fonts/Tauri/Tauri.woff2') format('woff2'),
+       url('/assets/fonts/Tauri/Tauri.woff') format('woff'),
+       url('/assets/fonts/Tauri/Tauri.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baloo Bhai 2';
+  src: url('/assets/fonts/BalooBhai2/BalooBhai2.woff2') format('woff2'),
+       url('/assets/fonts/BalooBhai2/BalooBhai2.woff') format('woff'),
+       url('/assets/fonts/BalooBhai2/BalooBhai2.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/Roboto/Roboto.woff2') format('woff2'),
+       url('/assets/fonts/Roboto/Roboto.woff') format('woff'),
+       url('/assets/fonts/Roboto/Roboto.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

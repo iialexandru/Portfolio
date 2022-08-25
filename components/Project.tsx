@@ -32,12 +32,12 @@ const Project = ({event}: {event: Event}) => {
           <div className={styles.links}>
               <Link href='/'>
                 <a>
-                  <Image src={!hoverGit ? 'https://res.cloudinary.com/multimediarog/image/upload/v1661010940/Portfolio/github-logo-6532_d0zwyf.svg' : 'https://res.cloudinary.com/multimediarog/image/upload/v1661011234/Portfolio/github-logo-6532_1_qbjohb.svg' } onMouseOver={() => setHoverGit(true)} onMouseLeave={() => setHoverGit(false)} width={30} height={30} alt='GitHub' priority/>
+                  <Image src={!hoverGit ? '/assets/images/GitHubIcon.svg' : '/assets/images/GitHubIconHovered.svg' } onMouseOver={() => setHoverGit(true)} onMouseLeave={() => setHoverGit(false)} width={30} height={30} alt='GitHub' priority/>
                 </a>
               </Link>
               <Link href='/'>
                 <a>
-                  <Image src={!hoverLink ? 'https://res.cloudinary.com/multimediarog/image/upload/v1661011104/Portfolio/login-right-arrow-11937_if4n4s.svg' : 'https://res.cloudinary.com/multimediarog/image/upload/v1661011232/Portfolio/login-right-arrow-11937_1_tbpihd.svg' } onMouseOver={() => setHoverLink(true)} onMouseLeave={() => setHoverLink(false)} width={30} height={30} alt='View Page' priority/>
+                  <Image src={!hoverLink ? '/assets/images/LinkIcon.svg' : '/assets/images/LinkIconHovered.svg' } onMouseOver={() => setHoverLink(true)} onMouseLeave={() => setHoverLink(false)} width={30} height={30} alt='View Page' priority/>
                 </a>
               </Link>
           </div>
