@@ -21,7 +21,7 @@ const Project = ({event}: {event: Event}) => {
             <span>- {event.date} -</span>
         </h2>
         <div className={styles.image}>
-          <Image src={event.image} width={500} height={300} alt='Project Image' objectFit='fill' />
+          <Image src={event.image} width={600} height={300} alt='Project Image' objectFit='contain' priority/>
         </div>
         <div className={styles.description}>
           <p>{event.description}</p>
@@ -38,7 +38,7 @@ const Project = ({event}: {event: Event}) => {
                   <Image src={!hoverGit ? '/assets/images/GitHubIcon.svg' : '/assets/images/GitHubIconHovered.svg' } onMouseOver={() => setHoverGit(true)} onMouseLeave={() => setHoverGit(false)} width={30} height={30} alt='GitHub' priority/>
                 </a>
               </Link>
-              <Link href='/'>
+              <Link href={event.page}>
                 <a target='_blank'>
                   <Image src={!hoverLink ? '/assets/images/LinkIcon.svg' : '/assets/images/LinkIconHovered.svg' } onMouseOver={() => setHoverLink(true)} onMouseLeave={() => setHoverLink(false)} width={30} height={30} alt='View Page' priority/>
                 </a>

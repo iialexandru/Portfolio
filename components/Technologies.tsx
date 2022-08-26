@@ -27,29 +27,29 @@ const Technologies = () => {
                     }
                 <div className={`${styles.full_circle} ${inView ? styles.put_in_place : ''}`}>
                     <div className={styles.imgs_circle}>
-                        <Image src={'/assets/images/ReactJS.svg'} height={50} width={50} alt='ReactJS' />
+                        <Image src={'/assets/images/ReactJS.svg'} height={50} width={50} alt='ReactJS' priority/>
                         <div style={{display: 'block', bottom: 30, position: 'relative'}}>
-                            <Image src={'/assets/images/ReactNative.svg'} height={50} width={50} alt='ReactNative' />
+                            <Image src={'/assets/images/ReactNative.svg'} height={50} width={50} alt='ReactNative' priority/>
                         </div>
                         <div style={{display: 'block', bottom: 30, position: 'relative'}}>
-                            <Image src={'/assets/images/GCP.png'} width={50} height={50} alt='GCP' />
+                            <Image src={'/assets/images/GCP.png'} width={50} height={50} alt='GCP' priority/>
                         </div>
-                        <Image src={'/assets/images/Redux.svg'} width={50} height={50} alt='Redux' />
+                        <Image src={'/assets/images/Redux.svg'} width={50} height={50} alt='Redux' priority/>
                     </div>
 
                     <div className={styles.circle_tech}>
-                        <Image src={'/assets/images/ClientBG.svg'} width={200} height={200} alt='ClientBG' />
+                        <Image src={'/assets/images/ClientBG.svg'} width={200} height={200} alt='ClientBG' priority/>
                     </div>
 
                     <div className={styles.imgs_circle}>
-                        <Image src={'/assets/images/NextJS.svg'} width={50} height={50} alt='NextJS' />
+                        <Image src={'/assets/images/NextJS.svg'} width={50} height={50} alt='NextJS' priority/>
                         <div style={{display: 'block', top: 30, position: 'relative'}}>
-                            <Image src={'/assets/images/Typescript.svg'} width={50} height={50} alt='Typescript' />
+                            <Image src={'/assets/images/Typescript.svg'} width={50} height={50} alt='Typescript' priority/>
                         </div>
                         <div style={{display: 'block', top: 25, position: 'relative'}}>
-                            <Image src={'/assets/images/GulpJS.svg'} width={23} height={50} alt='GulpJS' />
+                            <Image src={'/assets/images/GulpJS.svg'} width={23} height={50} alt='GulpJS' priority/>
                         </div>
-                        <Image src={'/assets/images/SocketIO.svg'} width={50} height={50} alt='SocketIO' />
+                        <Image src={'/assets/images/SocketIO.svg'} width={50} height={50} alt='SocketIO' priority/>
                     </div>
                 </div>
 
@@ -89,33 +89,33 @@ const Technologies = () => {
                             <li>Cloudinary</li>
                             <li>Trello</li>
                         </ul>
-                        {width > 550 && <Image style={{position: 'relative', bottom: 100}} src={'/assets/images/FillImage.svg'} width={250} height={200} layout={'fixed'} alt='FillImage' /> }
+                        {width > 550 && <Image style={{position: 'relative', bottom: 100}} src={'/assets/images/FillImage.svg'} width={250} height={200} layout={'fixed'} alt='FillImage' priority/> }
                     </div>
                 </div>
 
                 <div className={`${styles.full_circle} ${inView ? styles.put_in_place : ''}`}>
                     <div className={styles.imgs_circle}>
-                        <Image src={'/assets/images/Cloudinary.svg'} height={50} width={50} alt='Cloudinary' />
+                        <Image src={'/assets/images/Cloudinary.svg'} height={50} width={50} alt='Cloudinary' priority/>
                         <div style={{display: 'block', bottom: 30, position: 'relative'}}>
-                            <Image src={'/assets/images/MongoDB.svg'} height={50} width={50} alt='MongoDB' />
+                            <Image src={'/assets/images/MongoDB.svg'} height={50} width={50} alt='MongoDB' priority/>
                         </div>
                         <div style={{display: 'block', bottom: 30, position: 'relative'}}>
-                            <Image src={'/assets/images/Express.svg'} width={50} height={50} alt='Express' />
+                            <Image src={'/assets/images/Express.svg'} width={50} height={50} alt='Express' priority/>
                         </div>
-                        <Image src={'/assets/images/JWT.svg'} width={50} height={50} alt='JWT' />
+                        <Image src={'/assets/images/JWT.svg'} width={50} height={50} alt='JWT' priority/>
                     </div>
                     <div className={styles.circle_tech}>
-                        <Image src={'/assets/images/ServerBG.svg'} width={200} height={200} alt='ServerBG' />
+                        <Image src={'/assets/images/ServerBG.svg'} width={200} height={200} alt='ServerBG' priority/>
                     </div>
                     <div className={styles.imgs_circle}>
-                        <Image src={'/assets/images/NPM.svg'} width={50} height={50} alt='NPM' />
+                        <Image src={'/assets/images/NPM.svg'} width={50} height={50} alt='NPM' priority/>
                         <div style={{display: 'block', top: 35, position: 'relative', marginLeft: 7}}>
-                            <Image src={'/assets/images/Redis.svg'} width={50} height={50} alt='Redis' />
+                            <Image src={'/assets/images/Redis.svg'} width={50} height={50} alt='Redis' priority/>
                         </div>
                         <div style={{display: 'block', top: 30, position: 'relative'}}>
-                            <Image src={'/assets/images/SocketIO.svg'} width={50} height={50} alt='SocketIO' />
+                            <Image src={'/assets/images/SocketIO.svg'} width={50} height={50} alt='SocketIO' priority/>
                         </div>
-                        <Image src={'/assets/images/NodeJS.svg'} width={50} height={50} alt='NodeJS' />
+                        <Image src={'/assets/images/NodeJS.svg'} width={50} height={50} alt='NodeJS' priority/>
                     </div>
                 </div>
             </div>

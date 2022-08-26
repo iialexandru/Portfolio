@@ -14,7 +14,7 @@ export interface Event {
     video?: string;
     type: string;
     technologies: string[];
-
+    page: string;
 }
 
 interface Events extends Array<Event>{}
@@ -35,63 +35,71 @@ const Projects = () => {
             image: '/assets/images/NewsArchiver.png',
             date: '2021/05',
             type: 'Personal Project',
-            technologies: ['NextJS', 'Puppeteer']
+            technologies: ['NextJS', 'Puppeteer'],
+            page: 'https://newsarchiver.vercel.app/'
         },
         {
             title: 'FIICODE 2022, Stage 1 (Domain)',
-            description: 'First I started coding tutorial to learn about web development',
+            description: 'A website in which, after logged in and verified by the moderators (part included in the next project), you can create posts about what you would like to be improved and what you would add in your city/county/village, which can then be rated by other people that live in the same city/county/village and commented on. (made for the 2022 FIICode Competition)',
             image: '/assets/images/Romdig.png',
             date: '2021/05',
             type: 'FIICODE 2022',
-            technologies: ['NextJS', 'Google Cloud Platform']
+            technologies: ['NextJS', 'Google Cloud Platform'],
+            page: 'https://www.romdig.net/'
         },        
         {
             title: 'FIICODE 2022, Stage1 (Subdomain)',
-            description: 'First I started coding tutorial to learn about web development',
+            description: 'The website for the moderators of the ROMDIG site (see previous project), all of them assigned to their city/village/county (they cannot access other location\'s content), which includes the moderation of the posts, comments, account validation requests, people\'s accounts, of the other moderators (if you are a county moderator you can manage the moderators in your county), statistics.',
             image: '/assets/images/DashboardRomdig.png',
             date: '2021/05',
             type: 'FIICODE 2022',
-            technologies: ['NextJS', 'Google Cloud Platform']
+            technologies: ['NextJS', 'Google Cloud Platform'],
+            page: 'https://dashboard.romdig.net/'
         },        
         {
             title: 'FIICODE 2022 Stage 2 - 24hr hackathon (Web App)',
-            description: 'First I started coding tutorial to learn about web development',
+            description: 'A website through which you can check the location of your kids, and other kids you are assigned. You can make other people too responsible for your kids. You get notifications when your child gets into a restricted area set by you with the help of the Google Maps API. This a 2-part project, see the next one for full understanding.',
             image: '/assets/images/ChildTracker.png',
             date: '2021/05',
             type: 'FIICODE 2022',
-            technologies: ['Typescript']
+            technologies: ['Typescript', 'Google Cloud Platform', 'NextJS'],
+            page: ''
         },
         {
             title: 'FIICODE 2022 Stage 2 - 24hr hackathon (React Native App)',
-            description: 'First I started coding tutorial to learn about web development',
-            image: '/assets/images/Romdig.png',
+            description: 'The app must be installed on the person\'s phone you want to track and with the help of a QR code, which can be scanned only once, you have access to the child\'s location whenever the app is in foreground.',
+            image: '/assets/images/ChildTrackerApp.png',
             date: '2021/05',
             type: 'FIICODE 2022',
-            technologies: ['Typescript']
+            technologies: ['Typescript', 'React Native (Expo)'],
+            page: ''
         },
         {
             title: 'Weather App',
-            description: 'First I started coding tutorial to learn about web development',
-            image: '/assets/images/Romdig.png',
+            description: 'A small weather app, done with NextJS, in which you can select certain cities to check their weather (all the data is random, created with react context).',
+            image: '/assets/images/WeatherApp.png',
             date: '2021/05',
             type: 'Internship 2022',
-            technologies: ['Typescript']
+            technologies: ['Typescript', 'NextJS'],
+            page: 'https://weather-app-dun-zeta.vercel.app/'
         },
         {
             title: 'Messaging Website',
-            description: 'First I started coding tutorial to learn about web development',
-            image: '/assets/images/Romdig.png',
+            description: 'A messaging website throgh which you can talk to your friends in real time (SocketIO), with notifications, ability to send images. Also, to be able to chat to them, you have to add them as friends, being able, at the same time, to unfriend or block them.',
+            image: '/assets/images/MessagingWebApp.png',
             date: '2021/05',
             type: 'Internship 2022',
-            technologies: ['Typescript']
+            technologies: ['Typescript', 'Socket.io', 'Redux', 'ReactJS'],
+            page: 'https://messaging-app-blue.vercel.app/'
         },
         {
             title: 'Chatting Application',
-            description: 'First I started coding tutorial to learn about web development',
-            image: '/assets/images/Romdig.png',
+            description: 'A remastered application version of the messaging website, in which I had to implement 4 websites (communicating with the app with signals), done by 4 of my colleagues from the 2022 internship, so that you can have a website. At the same time, it has all the options available in the website version, but improved.',
+            image: '/assets/images/MessagingApp.jpg',
             date: '2021/05',
             type: 'Internship 2022',
-            technologies: ['Typescript']
+            technologies: ['Typescript', 'React Native', 'Redux', 'Socket.io'],
+            page: 'https://mega.nz/file/ZR1TjDhJ#2Z7yKi-IugV3ePB2cfwbdsaMla011tzZlhBh0rnIklo'
         },
     )
 
