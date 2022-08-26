@@ -237,3 +237,15 @@
         height: 275px;
     }
 } 
+
+@media screen and (min-width: 2000px) {
+    .container {
+        padding-inline: 10vw;
+    }
+}
+
+@media screen and (max-height: 397px) {
+    .container {
+        height: 500px;
+    }
+}

@@ -142,12 +142,8 @@
     }
 }
 
-@media screen and (min-width: 1800px) {
-    .main_section h1 {
-        font-size: clamp(3rem, 5vw, 10rem);
-
-        &:first-child {
-            font-size: clamp(2rem, 5vw, 4rem);
-        }
+@media screen and (max-height: 330px) {
+    .container {
+        height: 400px;
     }
 }
