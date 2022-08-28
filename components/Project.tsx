@@ -33,7 +33,7 @@ const Project = ({event}: {event: Event}) => {
             <p>{event.technologies.join(', ')}</p>
           </div>
           <div className={styles.links}>  
-              <Link href='/'>
+              <Link href={event.git}>
                 <a target='_blank'>
                   <Image src={!hoverGit ? '/assets/images/GitHubIcon.svg' : '/assets/images/GitHubIconHovered.svg' } onMouseOver={() => setHoverGit(true)} onMouseLeave={() => setHoverGit(false)} width={30} height={30} alt='GitHub' priority/>
                 </a>

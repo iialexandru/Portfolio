@@ -23,7 +23,9 @@ const Contact = () => {
                             Check it out
                         </a>
                     </Link>
-                    <button>Download my CV</button>
+                    <button>
+                        <a id='download' href='/assets/files/CV.pdf' download>Download my CV</a>
+                    </button>
                 </div>
             </div>
             <div className={styles.item}>

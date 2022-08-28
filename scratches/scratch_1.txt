@@ -1,0 +1,51 @@
+const LittleText = () => {
+  const { viewport } = useThree();
+  extend({ TextGeometry })
+  const w = useMemo(() => viewport.width / 2, [viewport])
+  const h = useMemo(() => viewport.height / 2, [viewport])
+
+  return(
+      <mesh rotation={[0, 0, 3.14]} position={[Math.max(-w + .7 - .3, -7), h - .8 * h * 2 + 1, 0]}>
+        <textGeometry args={['- Ipatov Ioan Alexandru -', {font, size: Math.min(w - .88 * w - .4, .5), height: .1}] } />
+        <meshLambertMaterial attach='material' color={'rgb(200, 200, 200)'}/>
+      </mesh>
+  )
+}
+
+const BigText = ({height}: {height: number}) => {
+  extend({ TextGeometry })
+
+  const { viewport } = useThree();
+  const w = useMemo(() => viewport.width / 2, [viewport])
+  const h = useMemo(() => viewport.height / 2, [viewport])
+
+  return (
+    <mesh rotation={[0, 0, 0]} position={[Math.max(-w + .7 - .3, -7), -h * .6 + 2, 0]}>
+      <textGeometry args={['Web Developer', {font, size: w / 10, height: .1}] } />
+      <meshLambertMaterial attach='material' color={'#1D7B94'}/>
+    </mesh>
+  )
+}
+
+const BiggerText = ({height}: {height: number}) => {
+  const { viewport } = useThree();
+  const w = useMemo(() => viewport.width / 2, [viewport])
+  const h = useMemo(() => viewport.height / 2, [viewport])
+
+  return (
+    <mesh rotation={[0, 0, 0]} position={[Math.max(-w + .7 - .3, -7), -h + 2, 0]}>
+      <textGeometry args={['FrontEnd & Backend', {font, size: w / 10, height: .1}] } />
+      <meshLambertMaterial attach='material' color={'#1D7B94'}/>
+    </mesh>
+  )
+}
+
+
+<Canvas>
+    <LittleText />
+    <BigText height={height} />
+    <BiggerText height={width} />
+    <CameraController />
+    <ambientLight intensity={.2} />
+    <spotLight position={[10, 15, 10]} angle={0.3} />
+</Canvas>

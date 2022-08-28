@@ -15,6 +15,7 @@ export interface Event {
     type: string;
     technologies: string[];
     page: string;
+    git: string;
 }
 
 interface Events extends Array<Event>{}
@@ -36,7 +37,8 @@ const Projects = () => {
             date: '2021/05',
             type: 'Personal Project',
             technologies: ['NextJS', 'Puppeteer'],
-            page: 'https://newsarchiver.vercel.app/'
+            page: 'https://newsarchiver.vercel.app/',
+            git: 'https://github.com/iialexandru/newsarchiver'
         },
         {
             title: 'FIICODE 2022, Stage 1 (Domain)',
@@ -45,7 +47,8 @@ const Projects = () => {
             date: '2021/05',
             type: 'FIICODE 2022',
             technologies: ['NextJS', 'Google Cloud Platform'],
-            page: 'https://www.romdig.net/'
+            page: 'https://www.romdig.net/',
+            git: 'https://github.com/iialexandru/ROMDIG---FE'
         },        
         {
             title: 'FIICODE 2022, Stage1 (Subdomain)',
@@ -54,16 +57,18 @@ const Projects = () => {
             date: '2021/05',
             type: 'FIICODE 2022',
             technologies: ['NextJS', 'Google Cloud Platform'],
-            page: 'https://dashboard.romdig.net/'
+            page: 'https://dashboard.romdig.net/',
+            git: 'https://github.com/iialexandru/ROMDIG_subdomain'
         },        
         {
             title: 'FIICODE 2022 Stage 2 - 24hr hackathon (Web App)',
-            description: 'A website through which you can check the location of your kids, and other kids you are assigned. You can make other people too responsible for your kids. You get notifications when your child gets into a restricted area set by you with the help of the Google Maps API. This a 2-part project, see the next one for full understanding.',
+            description: 'A website through which you can check the location of your kids, and other kids you are assigned. You can make other people too responsible for your kids. You get notifications when your child gets into a restricted area set by you with the help of the Google Maps API. This a 2-part project, see the next one for full understanding. (Unfortunately, the site doesn\'t fully work because I would have to expose my Google API Key, due to not having a dedicated server, with a stable ip. Hence, a video is provided instead.)',
             image: '/assets/images/ChildTracker.png',
             date: '2021/05',
             type: 'FIICODE 2022',
             technologies: ['Typescript', 'Google Cloud Platform', 'NextJS'],
-            page: ''
+            page: 'https://www.youtube.com/watch?v=_63gIg6FXB4&ab_channel=Fiils',
+            git: 'https://github.com/iialexandru/hackathon-fiicode2022-fe'
         },
         {
             title: 'FIICODE 2022 Stage 2 - 24hr hackathon (React Native App)',
@@ -72,16 +77,18 @@ const Projects = () => {
             date: '2021/05',
             type: 'FIICODE 2022',
             technologies: ['Typescript', 'React Native (Expo)'],
-            page: ''
+            page: 'https://www.youtube.com/watch?v=_63gIg6FXB4&ab_channel=Fiils',
+            git: 'https://github.com/iialexandru/MOBILE-HACKATHON'
         },
         {
             title: 'Weather App',
-            description: 'A small weather app, done with NextJS, in which you can select certain cities to check their weather (all the data is random, created with react context).',
+            description: 'A small weather app, done with NextJS, in which you can select certain cities to check their weather (all the data is random, created with react context). The repo, unfortunately, is private and it is not under my control.',
             image: '/assets/images/WeatherApp.png',
             date: '2021/05',
             type: 'Internship 2022',
             technologies: ['Typescript', 'NextJS'],
-            page: 'https://weather-app-dun-zeta.vercel.app/'
+            page: 'https://weather-app-dun-zeta.vercel.app/',
+            git: '/'
         },
         {
             title: 'Messaging Website',
@@ -90,7 +97,8 @@ const Projects = () => {
             date: '2021/05',
             type: 'Internship 2022',
             technologies: ['Typescript', 'Socket.io', 'Redux', 'ReactJS'],
-            page: 'https://messaging-app-blue.vercel.app/'
+            page: 'https://messaging-app-blue.vercel.app/',
+            git: 'https://github.com/iialexandru/MessagingApp'
         },
         {
             title: 'Chatting Application',
@@ -99,7 +107,8 @@ const Projects = () => {
             date: '2021/05',
             type: 'Internship 2022',
             technologies: ['Typescript', 'React Native', 'Redux', 'Socket.io'],
-            page: 'https://mega.nz/file/ZR1TjDhJ#2Z7yKi-IugV3ePB2cfwbdsaMla011tzZlhBh0rnIklo'
+            page: 'https://mega.nz/file/ZR1TjDhJ#2Z7yKi-IugV3ePB2cfwbdsaMla011tzZlhBh0rnIklo',
+            git: 'https://github.com/Stellar-Intern-Programme/SWGMMMA'
         },
     )
 

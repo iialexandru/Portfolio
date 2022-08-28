@@ -12,6 +12,7 @@
     position: absolute;
     top: 8px;
     left: 10px;
+    z-index: 999999;
 }
 
 .home {
@@ -81,6 +82,12 @@
     flex-flow: column wrap;
     font-family: 'Tauri', sans-serif;
     height: calc((100% - 70px) / 1.15);
+    width: 100vw;
+    
+
+    div {
+        background-color: black;
+    }
 
     h1 {
         color: $light-white;

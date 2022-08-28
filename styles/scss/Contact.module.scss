@@ -22,7 +22,7 @@
     align-items: center;
     gap: 2em;
 
-    a {
+    a:not([id='download']) {
         font-family: 'Tauri';
         transition: all .25s;
         font-size: clamp(.8rem, 2.5vw, 1rem);
