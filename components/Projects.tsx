@@ -111,10 +111,6 @@ const Projects = () => {
             git: 'https://github.com/Stellar-Intern-Programme/SWGMMMA'
         },
     )
-
-    useEffect(() => {
-        console.log(inView)
-    }, [inView])
     return (
         <div className={styles.container} id='projects'>
             <div className={styles.headline} ref={ref}>
