@@ -1,6 +1,5 @@
 import { useInView } from 'react-intersection-observer';
 import Project from './Project'
-import {useEffect} from 'react'
 
 import styles from '../styles/scss/Projects.module.scss';
 import useWindowSize from '../utils/useWindowSize'

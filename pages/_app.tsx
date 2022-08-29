@@ -6,6 +6,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return <>
   <Head>
     <title>Ipatov Ioan Alexandru - Web Develoepr</title>
+    <meta name="description" content="Web Portfolio for Ipatov Ioan Alexandru." />
+    <meta name='robots' content='index, nofollow' />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   </Head>
   <Component {...pageProps} />
   </>

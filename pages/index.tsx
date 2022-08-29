@@ -1,11 +1,5 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import { Canvas, useThree, extend } from '@react-three/fiber'
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
-import * as THREE from "three";
-import { useEffect, useMemo, useRef } from 'react'
 
 import styles from '../styles/scss/Container.module.scss'
 import AboutMe from '../components/AboutMe'
@@ -14,28 +8,7 @@ import Technologies from '../components/Technologies'
 import Contact from '../components/Contact'
 import useWindowSize from '../utils/useWindowSize'
 import { NoSSR } from '../utils/NoSsr'
-import Tauri from '../utils/Tauri_Regular.json'
 
-const font = new FontLoader().parse(Tauri);
-
-const CameraController = () => {
-  const { camera, gl, viewport } = useThree();
-  
-  useEffect(
-    () => {
-      const controls = new OrbitControls(camera, gl.domElement);
-
-      controls.minDistance = 3;
-      controls.maxDistance = 20;
-      controls.enableZoom = false
-      return () => {
-        controls.dispose();
-      };
-    },
-    [camera, gl]
-  );
-  return null;
-};
 
 const Home: NextPage = () => {
   const [ width, height ] = useWindowSize()
@@ -51,7 +24,7 @@ const Home: NextPage = () => {
   return (
     <NoSSR fallback={<div style={{width: '100vw', height: '100vh'}}></div>}>
       <div className={styles.container} style={{ scrollBehavior: 'smooth' }}>
-        <div className={styles.home}>
+        <div className={styles.home} style={{height}}>
             <div className={styles.logo}>
               <Image src={'/assets/images/PineTree.svg'} width={40} height={50} alt='Pine Tree' priority/>
             </div>

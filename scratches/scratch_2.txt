@@ -1,0 +1,28 @@
+import Tauri from '../utils/Tauri_Regular.json'
+import { Canvas, useThree, extend } from '@react-three/fiber'
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
+import * as THREE from "three";
+import { useEffect, useMemo, useRef } from 'react'
+
+const font = new FontLoader().parse(Tauri);
+
+const CameraController = () => {
+  const { camera, gl, viewport } = useThree();
+  
+  useEffect(
+    () => {
+      const controls = new OrbitControls(camera, gl.domElement);
+
+      controls.minDistance = 3;
+      controls.maxDistance = 20;
+      controls.enableZoom = false
+      return () => {
+        controls.dispose();
+      };
+    },
+    [camera, gl]
+  );
+  return null;
+};
