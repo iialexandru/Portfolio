@@ -25,9 +25,12 @@ const AboutMe = () => {
                     <h2 className={`${inView ? styles.am_head : ''}`}>Something about me...</h2>
                     <div className={styles.line_between}></div>
                     <p style={{opacity: !inView ? 0 : 1}}>
-                        I&apos;m a 17 year old student that has a big passion for everything about web development. I&apos;ve 
-                        started programming a few years ago, only taking it more serious beginning with 2020-2021. In the years in which I&apos;ve been coding, I believe that I managed
-                        to learn more and more stuff about programming and web development.     
+                        I am 17 year old young student with a really big interest in web development. I first took web development as a hobby, but afterwards it became 
+                        a more serious way of speding my time. Despite my age, I&apos;ve had the opportunity to work in a professional environment, in a team and even 
+                        lead a few other fellow web development enthusiasts during an internship. Throughout the years, I also was able to work with many technologies, 
+                        creating many diverse projects with them.
+
+
                     </p>
                 </div>
                 <div className={`${styles.image_of_self} ${inView ? styles.activate_animation : '' }`}>

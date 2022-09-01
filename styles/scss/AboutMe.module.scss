@@ -244,8 +244,9 @@
     }
 }
 
-@media screen and (max-height: 397px) {
+@media screen and (max-height: 475px) {
     .container {
-        height: 700px;
+        padding-top: 5em;
+        padding-bottom: 2em;
     }
 }
